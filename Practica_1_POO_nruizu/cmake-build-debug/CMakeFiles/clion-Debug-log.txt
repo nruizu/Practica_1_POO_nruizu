@@ -1,0 +1,4 @@
+C:\Users\nicor\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/nicor/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S D:\Users\nicor\Nico_HD\Tareas\Eafit\LP\C++\CLionProjects\Practica_1_Poo_nruizu -B D:\Users\nicor\Nico_HD\Tareas\Eafit\LP\C++\CLionProjects\Practica_1_Poo_nruizu\cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/Users/nicor/Nico_HD/Tareas/Eafit/LP/C++/CLionProjects/Practica_1_Poo_nruizu/cmake-build-debug
