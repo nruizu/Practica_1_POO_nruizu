@@ -17,27 +17,11 @@ public:
 
     void crearLista();
 
-    void crearListaSimple(Nodo *n);
-
-    void insertarCabezaLista(int entrada);
-
-    void insertarUltimo(int entrada);
-
-    void insertarLista(int entrada);
-
-    void insertarLista(Nodo *anterior, int entrada);
-
     Nodo *buscarListaDato(int destino);
 
     Nodo *buscarListaEvento(string destino);
 
-    Nodo *buscarListaPrev(int destino);
-
-    void eliminar(int entrada);
-
     Nodo *getUltimo();
-
-    void visualizar();
 
     void visualizarRev();
 
