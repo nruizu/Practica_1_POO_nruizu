@@ -86,40 +86,11 @@ void Lista::crearLista(){
 
 Lista::Lista() { primero = NULL; }//inicializamos el puntero primero con NULL al momento de crear la lista, es decir este es el puntero head cuando se crea la lista}
 
-void crearListaSimple(Nodo *n){
-    Nodo *t = n;
-    n = new Nodo(n->getDataNodo(), n->getEnlaceNodoNext(), n->getEvento(), n->getCientific());
-    n->setEnlacePrev(t);
-}
-
-void Lista::insertarCabezaLista(int entrada){
-    Nodo *nuevo;
-    nuevo = new Nodo(entrada);
-    nuevo->setEnlaceNext(primero);
-    primero->setEnlacePrev(nuevo);
-    primero = nuevo;
-}
-
-void Lista::insertarUltimo(int entrada) {
-    Nodo *ultimo =this->getUltimo();
-    Nodo *nuevo = new Nodo(entrada);
-    ultimo->setEnlaceNext(nuevo);
-    nuevo->setEnlacePrev(ultimo);
-}
-
 Nodo *Lista::getUltimo(){
     Nodo *n = primero;
     if (n == NULL)throw "Error, la lista esta vacia";
     while (n->getEnlaceNodoNext() != NULL) n = n->getEnlaceNodoNext();
     return n;
-}
-
-void Lista::insertarLista(Nodo *anterior, int entrada){
-    Nodo *nuevo;
-    nuevo = new Nodo(entrada);
-    nuevo->setEnlaceNext(anterior->getEnlaceNodoNext());
-    anterior->setEnlaceNext(nuevo);
-    nuevo->setEnlacePrev(anterior);
 }
 
 Nodo *Lista::buscarListaDato(int destino){
@@ -138,25 +109,6 @@ Nodo *Lista::buscarListaEvento(string destino){
             return temp;
     }
     return NULL;
-}
-
-Nodo *Lista::buscarListaPrev(int destino){
-    Nodo *temp;
-    for(temp = this->getUltimo(); temp != NULL; temp = temp->getEnlaceNodoPrev()){
-        if(destino == temp->getDataNodo())
-            return temp;
-    }
-    return NULL;
-}
-
-void Lista::visualizar(){
-    Nodo *n;
-    n = primero;
-    while(n != NULL){
-        cout << "|" << n->getDataNodo() << "|" << n->getCientific() << "|" << n->getEvento() << "|" << " --> " ;
-        n = n->getEnlaceNodoNext();
-    }
-    cout << "NULL";
 }
 
 void Lista::visualizarRev(){
@@ -205,33 +157,6 @@ void Lista::visualizarSecuencia() {
         k++;
         cout << "|" << n->getDataNodo() << "|" << n->getCientific() << "|" << n->getEvento() << "|" << " -- " ;
         n = n->getEnlaceNodoNext();
-    }
-}
-
-void Lista::eliminar(int entrada){
-    Nodo *actual,*anterior;
-    bool encontrado;
-    actual = primero;
-    anterior = NULL;
-    encontrado = false;
-    while((actual!=NULL) && !encontrado){
-        encontrado = (actual->getDataNodo() == entrada);
-        if (!encontrado){
-            anterior = actual;
-            actual = actual->getEnlaceNodoNext();
-        }
-    }
-    if(actual!=NULL){
-        if(actual==primero){
-            primero = actual->getEnlaceNodoNext();
-            primero->setEnlacePrev(NULL);
-        }
-        else{
-            Nodo *siguiente = actual->getEnlaceNodoNext();
-            anterior->setEnlaceNext(siguiente);
-            siguiente->setEnlacePrev(anterior);
-        }
-        delete actual;
     }
 }
 
