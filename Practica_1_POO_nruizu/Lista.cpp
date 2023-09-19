@@ -37,7 +37,7 @@ void Lista::crearLista(){
                                 primero = new Nodo(x, n, "EventoC", this->randomCientifico());
                                 if (esPrimo(x)){
                                     if((temp2->getCientific()=="Rosen") && (primero->getCientific()=="Rosen")){
-                                        cout << "\nEl cientifico Rosen ha podido viajar al pasado pero no ha podido pasar informacion ya que Rosen no se puede pasar informacion a si mismo, por lo que se ha creado una maquida del tiempo sin ayuda del cientifico del futuro\n\n";
+                                        cout << "\nEl cientifico Rosen ha podido viajar al pasado pero no ha podido pasar informacion ya que Rosen no se puede pasar informacion a si mismo, por lo que se ha creado una maquina del tiempo sin ayuda del cientifico del futuro\n\n";
                                     }
                                     else if(primero->getCientific()=="Rosen"){
                                         cout << "\nEl cientifico Rosen ha podido viajar al pasado para observar y ademas ha pasado informacion a Einstein, por lo que se ha creado una maquina del tiempo con ayuda del cientifico del futuro\n\n";
