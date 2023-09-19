@@ -1,5 +1,7 @@
 # Practica_1_POO_nruizu
 
-Integrantes: Nicolas Ruiz Urrea
+Nicolas Ruiz Urrea
+
+Version del compilador: MinGW w64 11.0
 
 IDE: CLion
